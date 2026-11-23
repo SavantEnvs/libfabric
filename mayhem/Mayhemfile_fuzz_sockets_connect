@@ -1,0 +1,9 @@
+project: savantenvs/libfabric
+target: fuzz-sockets-connect
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-sockets-connect/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sockets_connect
+    libfuzzer: true
+    timeout: 5

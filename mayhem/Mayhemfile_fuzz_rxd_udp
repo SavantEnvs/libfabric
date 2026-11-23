@@ -1,0 +1,9 @@
+project: savantenvs/libfabric
+target: fuzz-rxd-udp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-rxd-udp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rxd_udp
+    libfuzzer: true
+    timeout: 5

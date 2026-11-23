@@ -1,0 +1,9 @@
+project: savantenvs/libfabric
+target: fuzz-tcp-msg
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-tcp-msg/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tcp_msg
+    libfuzzer: true
+    timeout: 5

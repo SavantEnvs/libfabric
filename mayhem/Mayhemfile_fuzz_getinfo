@@ -1,0 +1,9 @@
+project: savantenvs/libfabric
+target: fuzz-getinfo
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-getinfo/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_getinfo
+    libfuzzer: true
+    timeout: 5
